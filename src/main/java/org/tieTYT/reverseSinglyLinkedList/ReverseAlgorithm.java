@@ -1,8 +1,8 @@
 package org.tieTYT.reverseSinglyLinkedList;
 
 
-public class Reverse {
-    public static Node imperative(Node head) {
+public class ReverseAlgorithm {
+    public static Node reverse(Node head) {
         if (head == null) {
             return null;
         }
