@@ -1,4 +1,4 @@
-package org.tieTYT.reverseSinglyLinkedList;
+package org.tietyt.reverse_singly_linked_list;
 
 
 import org.junit.Test;
