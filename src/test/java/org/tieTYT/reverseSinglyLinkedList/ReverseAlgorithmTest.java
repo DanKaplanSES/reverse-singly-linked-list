@@ -34,4 +34,9 @@ public class ReverseAlgorithmTest {
         assertEquals(new Node(4, new Node(3, new Node(2, new Node(1)))), ReverseAlgorithm.reverse(new Node(1, new Node(2, new Node(3, new Node(4))))));
     }
 
+    @Test
+    public void reversingFiveElementsReturnsTheReverse() {
+        assertEquals(new Node(5, new Node(4, new Node(3, new Node(2, new Node(1))))), ReverseAlgorithm.reverse(new Node(1, new Node(2, new Node(3, new Node(4, new Node(5)))))));
+    }
+
 }
