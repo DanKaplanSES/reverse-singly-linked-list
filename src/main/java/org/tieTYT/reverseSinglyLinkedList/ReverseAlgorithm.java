@@ -2,24 +2,24 @@ package org.tieTYT.reverseSinglyLinkedList;
 
 
 public class ReverseAlgorithm {
-    public static Node reverse(Node head) {
-        if (head == null) {
+    public static Node reverse(Node originalHead) {
+        if (originalHead == null) {
             return null;
         }
-        if (head.getNext() == null) {
-            return head;
+        if (originalHead.getNext() == null) {
+            return originalHead;
         }
 
-        Node lastFront = head;
+        Node frontFromLastIteration = originalHead;
 
-        while (head.getNext() != null) {
-            Node newFront = head.getNext();
-            Node newRest = head.getNext().getNext();
-            head.setNext(newRest);
-            newFront.setNext(lastFront);
-            lastFront = newFront;
+        while (originalHead.getNext() != null) {
+            Node newFront = originalHead.getNext();
+            Node newRest = originalHead.getNext().getNext();
+            originalHead.setNext(newRest);
+            newFront.setNext(frontFromLastIteration);
+            frontFromLastIteration = newFront;
         }
-        return lastFront;
+        return frontFromLastIteration;
     }
 
 
