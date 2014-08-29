@@ -6,9 +6,6 @@ public class ReverseAlgorithm {
         if (originalHead == null) {
             return null;
         }
-        if (originalHead.getNext() == null) {
-            return originalHead;
-        }
 
         Node frontFromLastIteration = originalHead;
 
