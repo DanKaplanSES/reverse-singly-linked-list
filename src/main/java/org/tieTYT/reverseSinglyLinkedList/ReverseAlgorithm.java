@@ -6,18 +6,23 @@ public class ReverseAlgorithm {
         if (head == null) {
             return null;
         }
-        Node[] reversedArray = reversedArray(head);
-
-        for (int i = 0; i < reversedArray.length - 1; i++) {
-            Node first = reversedArray[i];
-            Node second = reversedArray[i + 1];
-            first.setNext(second);
+        if (head.getNext() == null) {
+            return head;
         }
 
-        reversedArray[reversedArray.length - 1].setNext(null);   //otherwise the new back of the list will still reference the reversed front.
+        Node lastFront = head;
 
-        return reversedArray[0];
+        while (head.getNext() != null) {
+            Node newFront = head.getNext();
+            Node newRest = head.getNext().getNext();
+            head.setNext(newRest);
+            newFront.setNext(lastFront);
+            lastFront = newFront;
+        }
+        return lastFront;
     }
+
+
 
     private static Node[] reversedArray(Node head) {
         int size = getListSize(head);

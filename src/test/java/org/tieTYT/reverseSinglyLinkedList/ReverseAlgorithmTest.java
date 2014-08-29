@@ -20,6 +20,11 @@ public class ReverseAlgorithmTest {
     }
 
     @Test
+    public void reversingTwoElementsReturnsTheReverse() {
+        assertEquals(new Node(2, new Node(1)), ReverseAlgorithm.reverse(new Node(1, new Node(2))));
+    }
+
+    @Test
     public void reversingThreeElementsReturnsTheReverse() {
         assertEquals(new Node(3, new Node(2, new Node(1))), ReverseAlgorithm.reverse(new Node(1, new Node(2, new Node(3)))));
     }
